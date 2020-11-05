@@ -4,15 +4,18 @@
         <div class="row">
             <h1 class="col">Artist List</h1>
         </div>
+        @auth
         <div class="row">
             <div class="col-md-2 offset-md-10">
-                <a href="{{route('artist.create')}}" class="btn btn-primary btn-block" role="button"
-                   aria-pressed="true">Add</a>
+                <a href="{{route('artist.create')}}" class="btn btn-block" role="button"
+                   aria-pressed="true" style="background-color: #90a88e; color: #fff">Add</a>
             </div>
         </div>
+        @endauth
+        
         
         <div class="row" style="margin-top: 30px;">
-            <table class="table table-striped">
+            <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -23,13 +26,23 @@
                     <th scope="col">Birthplace</th>
                     <th scope="col">Updated At</th>
                     <th scope="col">Created At</th>
+                    @auth
                     <th scope="col">Action</th>
+                    @endauth
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($artists as $artist)
                     <tr>
-                        <td><a href="{{ route('artist.edit', $artist) }}">{{ $artist->name }}</a></td>
+                        <td>
+                            @auth
+                                <a href="{{ route('artist.edit', $artist) }}">
+                            @endauth{{ $artist->name }}
+                            @auth
+                                 </a>
+                            @endauth
+                            
+                        </td>
                         <td>{{ $artist->email }}</td>
                         <td>{{ $artist->phone_number }}</td>
                         <td>{{ $artist->address }}</td>
@@ -37,13 +50,16 @@
                         <td>{{ $artist->birthplace }}</td>
                         <td>{{ $artist->updated_at }}</td>
                         <td>{{ $artist->created_at }}</td>
+                        @auth
                         <td>
                             <form action="{{ route('artist.destroy', $artist) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn" style="background-color: #e18d01; color: #fff;">Delete</button>
                             </form>
                         </td>
+                        @endauth
+                        
                     </tr>
                 @endforeach
                 </tbody>

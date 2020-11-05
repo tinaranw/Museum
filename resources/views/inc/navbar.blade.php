@@ -17,11 +17,11 @@
                 class="collapse navbar-collapse" id="navcol-1" style="font-family: Lato, sans-serif;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/homepage">Home</a></li>
-                    @auth
+                    
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/artwork">Artworks</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/artist">Artists</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/list">List</a></li>
-                    @endauth
+                    
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/contact">Contact</a></li>
                     @guest
                             <li class="nav-item">

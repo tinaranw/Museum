@@ -4,16 +4,18 @@
         <div class="row">
             <h1 class="col">Artwork List</h1>
         </div>
+        @auth
         <div class="row">
             <div class="col-md-2 offset-md-10">
-                <a href="{{route('artwork.create')}}" class="btn btn-primary btn-block" role="button"
-                   aria-pressed="true">Add</a>
+                <a href="{{route('artwork.create')}}" class="btn btn-block" role="button"
+                   aria-pressed="true" style="background-color: #90a88e; color: #fff">Add</a>
             </div>
         </div>
+        @endauth
         
         <div class="row" style="margin-top: 30px;">
 
-            @foreach($artworks as $artwork)
+            {{-- @foreach($artworks as $artwork)
             <div class="card" style="margin: 30px">
                 <div class="card-header">
                     <h1><a href="{{ route('artwork.edit', $artwork) }}">{{ $artwork->title }}</a></h1>
@@ -35,8 +37,8 @@
                     </blockquote>
                 </div>
             </div>
-            @endforeach
-            {{-- <table class="table table-striped">
+            @endforeach --}}
+            <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th scope="col">Title</th>
@@ -47,13 +49,22 @@
                     <th scope="col">Type of Artwork</th>
                     <th scope="col">Updated At</th>
                     <th scope="col">Created At</th>
-                    <th scope="col">Action</th>
+                    @auth
+                        <th scope="col">Action</th>
+                    @endauth
+                    
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($artworks as $artwork)
-                    <tr>
-                        <td><a href="{{ route('artwork.edit', $artwork) }}">{{ $artwork->title }}</a></td>
+                    <tr><td>
+                        @auth
+                            <a href="{{ route('artwork.edit', $artwork) }}">
+                        @endauth{{ $artwork->title }}
+                        @auth
+                            </a>
+                        @endauth
+                        </td>
                         <td>{{ $artwork->description }}</td>
                         <td>{{ $artwork->creator->name . ' ('.$artwork->creator->email . ')'}}</td>
                         <td>{{ $artwork->artwork_date }}</td>
@@ -61,17 +72,19 @@
                         <td>{{ $artwork->type }}</td>
                         <td>{{ $artwork->updated_at }}</td>
                         <td>{{ $artwork->created_at }}</td>
+                        @auth
                         <td>
                             <form action="{{ route('artwork.destroy', $artwork) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn" style="background-color: #e18d01; color: #fff;">Delete</button>
                             </form>
                         </td>
+                        @endauth
                     </tr>
                 @endforeach
                 </tbody>
-            </table> --}}
+            </table>
         </div>
     </div>
 @endsection

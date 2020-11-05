@@ -4,15 +4,8 @@
         <div class="row">
             <h1 class="col">List</h1>
         </div>
-        {{-- <div class="row">
-            <div class="col-md-2 offset-md-10">
-                <a href="{{route('artwork.create')}}" class="btn btn-primary btn-block" role="button"
-                   aria-pressed="true">Add</a>
-            </div>
-        </div>
-         --}}
         <div class="row" style="margin-top: 30px;">
-            <table class="table table-striped">
+            <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th scope="col">Name</th>
