@@ -38,16 +38,16 @@
                     <div class="form-group">
                         <label for="type">Type of Artwork:</label>
                         <select name="type" class="custom-select" value="{{ $artwork->type }}" required>
-                               <option value="Ceramics"><p>Ceramics</p></option>
-                               <option value="Drawing"><p>Drawing</p></option>
-                               <option value="Painting"><p>Painting</p></option>
-                               <option value="Sculpture"><p>Sculpture</p></option>
-                               <option value="Printmaking"><p>Printmaking</p></option>
-                               <option value="Design"><p>Design</p></option>
-                               <option value="Crafts"><p>Crafts</p></option>
-                               <option value="Photography"><p>Photography</p></option>
-                               <option value="Video"><p>Video</p></option>
-                               <option value="Filmmaking"><p>Filmmaking</p></option>
+                               <option value="Ceramics" @if ($artwork->type == 'Ceramics') selected end="@endif"><p>Ceramics</p></option>
+                               <option value="Drawing" @if ($artwork->type == 'Drawing') selected end="@endif"><p>Drawing</p></option>
+                               <option value="Painting" @if ($artwork->type == 'Painting') selected end="@endif"><p>Painting</p></option>
+                               <option value="Sculpture" @if ($artwork->type == 'Sculpture') selected end="@endif"><p>Sculpture</p></option>
+                               <option value="Printmaking" @if ($artwork->type == 'Printmaking') selected end="@endif"><p>Printmaking</p></option>
+                               <option value="Design" @if ($artwork->type == 'Design') selected end="@endif"><p>Design</p></option>
+                               <option value="Crafts" @if ($artwork->type == 'Crafts') selected end="@endif"><p>Crafts</p></option>
+                               <option value="Photography" @if ($artwork->type == 'Photography') selected end="@endif"><p>Photography</p></option>
+                               <option value="Video" @if ($artwork->type == 'Video') selected end="@endif"><p>Video</p></option>
+                               <option value="Filmmaking" @if ($artwork->type == 'Filmmaking') selected end="@endif"><p>Filmmaking</p></option>
                         </select>
                     </div>
                     
