@@ -21,7 +21,7 @@
                         <label>Created by:</label>
                         <select name="artist_id" class="custom-select">
                             @foreach ($artists as $artist)
-                                <option value="{{$artist->id}}" required>{{$artist->name.'('. $artist->email .')'}}</option>
+                                <option value="{{$artist->id}}" {{ ( $artist->id == $artwork->creator->id) ? 'selected' : '' }} required>{{$artist->name.' ('. $artist->email .')'}}</option>
                             @endforeach
  
                         </select>

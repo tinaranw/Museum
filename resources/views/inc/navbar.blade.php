@@ -16,13 +16,13 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="font-family: Lato, sans-serif;">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/homepage">Home</a></li>
+                    <li class="nav-item {{ (request()->is('/homepage')) ? 'active' : '' }}" role="presentation"><a class="nav-link" href="/homepage">Home</a></li>
                     
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/artwork">Artworks</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/artist">Artists</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/list">List</a></li>
+                    <li class="nav-item {{ (request()->is('/artwork')) ? 'active' : '' }}" role="presentation"><a class="nav-link" href="/artwork">Artworks</a></li>
+                    <li class="nav-item {{ (request()->is('/artist')) ? 'active' : '' }}" role="presentation"><a class="nav-link" href="/artist">Artists</a></li>
+                    <li class="nav-item {{ (request()->is('/list')) ? 'active' : '' }}" role="presentation"><a class="nav-link" href="/list">List</a></li>
                     
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item {{ (request()->is('/contact')) ? 'active' : '' }}" role="presentation"><a class="nav-link" href="/contact">Contact</a></li>
                     @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
