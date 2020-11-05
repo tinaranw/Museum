@@ -39,7 +39,7 @@
             </div>
             @endforeach --}}
             <table class="table table-bordered">
-                <thead>
+                <thead style="background-color: #f0ece3;color: #282d32;">
                 <tr>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>

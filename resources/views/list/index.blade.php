@@ -6,7 +6,7 @@
         </div>
         <div class="row" style="margin-top: 30px;">
             <table class="table table-bordered">
-                <thead>
+                <thead style="background-color: #f0ece3;color: #282d32;">
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
