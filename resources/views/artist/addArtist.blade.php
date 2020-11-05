@@ -1,4 +1,7 @@
 @extends('layout.app')
+@section('title')
+<title>Add Artist</title>
+@endsection
 @section('content')
     <div class="container" style="margin: 20px auto;">
         <div class="row">

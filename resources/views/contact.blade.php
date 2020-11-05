@@ -1,4 +1,7 @@
 @extends('layout.app')
+@section('title')
+<title>Contact</title>
+@endsection
 @section('content')
 <section style="width: 100%;background-color: #ffffff;">
     <div class="container" style="width: 100%;">

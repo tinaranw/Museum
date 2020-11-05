@@ -1,4 +1,7 @@
 @extends('layout.app')
+@section('title')
+<title>Homepage</title>
+@endsection
 @section('content')
 <header style="width: 100%;height: 600px;background-position: top;background-size: cover;background-repeat: no-repeat;background-image: url({{ asset('/img/headerbg.png') }});">
     <div style="width: 100%;"></div>
