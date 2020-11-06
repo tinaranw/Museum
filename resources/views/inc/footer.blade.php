@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6 item text">
                     <h3><strong>le Musée de Silence</strong><br></h3>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    <p>le Musée de Silence in Moscow is a natural history museum that exhibits a vast range of specimens from various segments of natural history.</p>
                 </div>
                 <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
             </div>
