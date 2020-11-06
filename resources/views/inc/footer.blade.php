@@ -14,8 +14,8 @@
                     <h3>About</h3>
                     <ul>
                         <li><a href="#">Museum</a></li>
-                        <li><a href="#">Artists</a></li>
-                        <li><a href="#">Artworks</a></li>
+                        <li><a href="/artist">Artists</a></li>
+                        <li><a href="/artwork">Artworks</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
