@@ -13,15 +13,15 @@
                     @csrf
                     <div class="form-group">
                         <label>Title:</label>
-                        <input type="text" class="form-control" name="title">
+                        <input type="text" class="form-control" name="title" required>
                     </div>
                     <div class="form-group">
                         <label>Description:</label>
-                        <textarea class="form-control" name="description"></textarea>
+                        <textarea class="form-control" name="description" required></textarea>
                     </div>
                     <div class="form-group">
                         <label>Created by:</label>
-                        <select name="artist_id" class="custom-select">
+                        <select name="artist_id" class="custom-select" required>
                             @foreach ($artists as $artist)
                                 <option value="{{$artist->id}}">{{$artist->name.'('. $artist->email .')'}}</option>
                             @endforeach
@@ -30,15 +30,15 @@
                      </div>
                     <div class="form-group">
                         <label for="tanggal">Artwork Creation Date:</label>
-                        <input type="date" class="form-control" name="artwork_date">
+                        <input type="date" class="form-control" name="artwork_date" required>
                     </div>
                     <div class="form-group">
                         <label>Price:</label>
-                        <input type="number" class="form-control" name="price">
+                        <input type="number" class="form-control" name="price" required>
                     </div>
                     <div class="form-group">
                         <label for="type">Type of Artwork:</label>
-                        <select name="type" class="custom-select">
+                        <select name="type" class="custom-select" required>
                                <option value="Ceramics"><p>Ceramics</p></option>
                                <option value="Drawing"><p>Drawing</p></option>
                                <option value="Painting"><p>Painting</p></option>
